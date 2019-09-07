@@ -7,28 +7,28 @@
     tools:context=".AddExpenseActivity">
 
     <EditText
-        android:id="@+id/PaymentTypeText"
+        android:id="@+id/paymentTypeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
-        android:labelFor="@id/PaymentTypeText"
+        android:labelFor="@id/paymentTypeText"
         app:layout_constraintStart_toStartOf="@+id/amountText"
         app:layout_constraintTop_toBottomOf="@+id/amountText" />
 
     <EditText
-        android:id="@+id/PaymentMethodText"
+        android:id="@+id/paymentMethodText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
-        android:labelFor="@id/PaymentMethodText"
-        app:layout_constraintStart_toStartOf="@+id/PaymentTypeText"
-        app:layout_constraintTop_toBottomOf="@+id/PaymentTypeText" />
+        android:labelFor="@id/paymentMethodText"
+        app:layout_constraintStart_toStartOf="@+id/paymentTypeText"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTypeText" />
 
     <EditText
         android:id="@+id/amountText"
@@ -53,5 +53,5 @@
         android:onClick="saveExpenseForm"
         android:text="@string/save"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PaymentMethodText" />
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
