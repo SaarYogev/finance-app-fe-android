@@ -8,9 +8,9 @@ import java.util.*
 
 class AddExpenseActivity : AppCompatActivity() {
 
-    private val amountText = findViewById<EditText>(R.id.amountText)
-    private val paymentTypeText = findViewById<EditText>(R.id.paymentTypeText)
-    private val paymentMethodText = findViewById<EditText>(R.id.paymentMethodText)
+    private val amountText get() = findViewById<EditText>(R.id.amountText)
+    private val paymentTypeText get() = findViewById<EditText>(R.id.paymentTypeText)
+    private val paymentMethodText get() = findViewById<EditText>(R.id.paymentMethodText)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
