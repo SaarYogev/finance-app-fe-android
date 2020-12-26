@@ -59,7 +59,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         // the GoogleSignInAccount will be non-null.
         val account = GoogleSignIn.getLastSignedInAccount(this)
         if (account != null) {
-            startActivity(Intent(this, AddExpenseActivity::class.java).apply {
+            startActivity(Intent(this, MainActivity::class.java).apply {
                 putExtra(
                     "account",
                     account
@@ -94,7 +94,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
             val account =
                 completedTask.getResult(ApiException::class.java)
             if (account != null) {
-                startActivity(Intent(this, AddExpenseActivity::class.java).apply {
+                startActivity(Intent(this, MainActivity::class.java).apply {
                     putExtra(
                         "account",
                         account

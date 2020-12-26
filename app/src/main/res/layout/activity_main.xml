@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddExpenseActivity">
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
     <EditText
         android:id="@+id/paymentTypeText"
@@ -13,6 +23,7 @@
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="@string/payment_type"
         android:inputType="textPersonName"
         android:labelFor="@id/paymentTypeText"
         app:layout_constraintStart_toStartOf="@+id/amountText"
@@ -25,6 +36,7 @@
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="@string/payment_method"
         android:inputType="textPersonName"
         android:labelFor="@id/paymentMethodText"
         app:layout_constraintStart_toStartOf="@+id/paymentTypeText"
@@ -38,17 +50,30 @@
         android:layout_marginTop="32dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="@string/amount"
         android:inputType="number"
         android:labelFor="@id/amountText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/paymentDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="datetime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodText"
+        android:autofillHints="" />
+
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="92dp"
         android:labelFor="@id/saveButton"
         android:onClick="saveExpenseForm"
         android:text="@string/save"
